@@ -1,0 +1,38 @@
+{
+  "name": "bunyan-gke-stackdriver",
+  "version": "0.1.0",
+  "description": "Bunyan Transport for GKE (Google Kubernetes Engine) using Stackdriver",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcortesi/bunyan-stackdriver-fluentd.git"
+  },
+  "keywords": [
+    "bunyan",
+    "bunyan-transport",
+    "stackdriver",
+    "fluentd",
+    "gcp",
+    "google-cloud"
+  ],
+  "author": "Mariano Cortesi <mcortesi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcortesi/bunyan-stackdriver-fluentd/issues"
+  },
+  "homepage": "https://github.com/mcortesi/bunyan-stackdriver-fluentd#readme",
+  "devDependencies": {
+    "@types/bunyan": "^1.8.4",
+    "bunyan": "^1.8.12",
+    "chalk": "^2.4.1",
+    "typescript": "^3.0.1"
+  },
+  "peerDependencies": {
+    "bunyan": "^1.8.12"
+  }
+}
