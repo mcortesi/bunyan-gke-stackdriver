@@ -176,7 +176,18 @@ Also, the error log entry for stackdriver requires us to set:
   },
 ```
 
-We will use the `name` configured as `serviceContext.name`.
+We will use the `name` configured as `serviceContext.name`. If `serviceContext` has already been defined, like below, we don't overwrite it.
+
+```ts
+const logger = Bunyan.createLogger({
+  name: 'MyLogName',
+  streams: [createStream()],
+  serviceContext: {
+    service: 'MyService',
+    version: '0.0.1'
+  }
+});
+```
 
 Thanks to this, you can track your error ocurrences in https://cloud.google.com/error-reporting/
 

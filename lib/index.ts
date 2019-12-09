@@ -71,9 +71,12 @@ export class StackdriverTransformer extends Transform {
 
     if (err && err.stack) {
       baseEntry.message = err.stack;
-      baseEntry.serviceContext = {
-        service: record.name,
-      };
+      if (!baseEntry.serviceContext) {
+        baseEntry.serviceContext = {
+          service: record.name,
+        };
+      }
+
     }
 
     if (req) {
